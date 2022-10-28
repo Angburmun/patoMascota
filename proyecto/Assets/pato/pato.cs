@@ -17,8 +17,8 @@ public class pato : MonoBehaviour
         hambre       = 100;
         cansancio    = 100;
         aburrimiento = 100;
+    }
     
-
     // Update is called once per frame
     void Update()
     {   
@@ -40,5 +40,5 @@ public class pato : MonoBehaviour
             // Reset del contador de tiempo
             time = 0;
         }
-       }
+    }
 }
