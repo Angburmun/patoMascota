@@ -14,10 +14,10 @@ public class pato : MonoBehaviour
     void Start()
     {
         // Inicialización de los stats
-        hambre = 100;
-        cansancio = 100;
+        hambre       = 100;
+        cansancio    = 100;
         aburrimiento = 100;
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -28,14 +28,14 @@ public class pato : MonoBehaviour
         // Cada 3 segundos
         if (time > 3) { 
             // Actualización de los stats
-            if (hambre > 0) hambre -= sufrimiento;
-            if (cansancio > 0) cansancio -= sufrimiento;
+            if (hambre > 0)       hambre -= sufrimiento;
+            if (cansancio > 0)    cansancio -= sufrimiento;
             if (aburrimiento > 0) aburrimiento -= sufrimiento;
 
             // debug
-            print(hambre);
-            print(cansancio);
-            print(aburrimiento);
+            print("Hambre: "       + hambre);
+            print("Cansancio: "    + cansancio);
+            print("Aburrimiento: " + aburrimiento);
             
             // Reset del contador de tiempo
             time = 0;
