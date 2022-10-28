@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class pato : MonoBehaviour
 {
-    double hambre;
-    double cansancio;
-    double aburrimiento;
-    const double sufrimiento = 0.03f;
+    int hambre;
+    int cansancio;
+    int aburrimiento;
+    const int sufrimiento = 1;
     float time;
 
     // Start is called before the first frame update
