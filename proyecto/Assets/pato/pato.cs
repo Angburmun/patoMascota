@@ -4,39 +4,41 @@ using UnityEngine;
 
 public class pato : MonoBehaviour
 {
-    public double hambre;
-    public double cansancio;
-    public double aburrimiento;
-    public double sufrimiento;
-    float x;
+    double hambre;
+    double cansancio;
+    double aburrimiento;
+    const double sufrimiento = 0.03f;
+    float time;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Inicialización de los stats
         hambre = 100;
         cansancio = 100;
         aburrimiento = 100;
-        sufrimiento = 1;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        x += Time.deltaTime;
+    {   
+        // Contador
+        time += Time.deltaTime;
 
-        if (x > 3) { 
-        if (hambre > 0) {hambre -= sufrimiento;}
+        // Cada 3 segundos
+        if (time > 3) { 
+            // Actualización de los stats
+            if (hambre > 0) hambre -= sufrimiento;
+            if (cansancio > 0) cansancio -= sufrimiento;
+            if (aburrimiento > 0) aburrimiento -= sufrimiento;
+
+            // debug
+            print(hambre);
+            print(cansancio);
+            print(aburrimiento);
             
-        print(hambre);
-
-        if (cansancio > 0) { cansancio -= sufrimiento;}
-
-        print(cansancio);
-
-        if (aburrimiento > 0) { aburrimiento -= sufrimiento; }
-
-        print(aburrimiento);
-            x = 0;
+            // Reset del contador de tiempo
+            time = 0;
         }
        }
 }
